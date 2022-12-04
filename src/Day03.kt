@@ -107,7 +107,7 @@ fun main() {
 // test if implementation meets criteria from the description, like:
     /*  val testInput = readInput("Day01_test")
   check(part1(testInput) == 1)*/
-    val input = readInput("Day003")
+    val input = readInput("Day03")
     println(part1(input))
     println(part2(input))
 }
@@ -150,10 +150,3 @@ fun commonChars(wordList: MutableList<String>): List<String> {
     return res
 }
 
-fun String.splitAtIndex(index: Int) = when {
-    index < 0 -> 0
-    index > length -> length
-    else -> index
-}.let { it ->
-    take(it).map { it.toChar() }.toMutableList() to substring(it).map { it.toChar() }.toMutableList()
-}
